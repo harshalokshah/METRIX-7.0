@@ -7,7 +7,14 @@ export default function Footer() {
         
         {/* Column 1 */}
         <div>
-          <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-tight">METRIX 7.0i</h3>
+          <div className="flex items-center gap-4 mb-6">
+            {/* Logo 3 Placeholder */}
+            <div className="relative w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center overflow-hidden shrink-0 border border-slate-700">
+               <span className="text-[10px] font-bold text-slate-400">Logo 3</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white uppercase tracking-tight">METRIX 7.0i</h3>
+          </div>
+          
           <p className="text-sm leading-relaxed mb-6">
             The 7th Indian Conference on Mechanical Engineering Tech Research Innovation and Exchange. A biennial international event fostering research and collaboration in applied mechanics and allied fields.
           </p>

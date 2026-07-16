@@ -16,11 +16,15 @@ export default function Navbar() {
       {/* Top Tier: Logos & Branding */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center border-b border-slate-100">
         <div className="flex items-center gap-4">
-          <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
+          <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden shrink-0">
              <span className="text-xs text-slate-400">Logo 1</span>
           </div>
-          <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
+          <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden shrink-0">
              <span className="text-xs text-slate-400">Logo 2</span>
+          </div>
+          {/* New Logo 3 Slot */}
+          <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden shrink-0">
+             <span className="text-xs text-slate-400">Logo 3</span>
           </div>
         </div>
         <div className="text-right hidden md:block">

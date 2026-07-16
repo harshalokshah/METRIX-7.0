@@ -5,10 +5,8 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  // This state tracks whether the mobile menu is open (true) or closed (false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to toggle the state when the button is clicked
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -19,11 +17,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center border-b border-slate-100">
         <div className="flex items-center gap-4">
           <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
-             {/* <Image src="/logo-iit.png" alt="IIT Ropar Logo" fill className="object-contain p-1" /> */}
              <span className="text-xs text-slate-400">Logo 1</span>
           </div>
           <div className="relative w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
-             {/* <Image src="/logo-metrix.png" alt="Department Logo" fill className="object-contain p-1" /> */}
              <span className="text-xs text-slate-400">Logo 2</span>
           </div>
         </div>
@@ -38,7 +34,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-12">
             
-            {/* Desktop Menu (Hidden on Mobile) */}
+            {/* Desktop Menu */}
             <div className="hidden md:flex space-x-1">
               <Link href="/" className="bg-blue-700 text-white px-4 py-3 text-sm font-semibold hover:bg-blue-600 transition-colors">Home</Link>
               <Link href="/about" className="px-4 py-3 text-sm font-medium hover:bg-slate-800 transition-colors">About</Link>
@@ -51,28 +47,43 @@ export default function Navbar() {
               <Link href="/contact" className="px-4 py-3 text-sm font-medium hover:bg-slate-800 transition-colors">Contact</Link>
             </div>
             
-            {/* Desktop Registration Button (Hidden on Mobile) */}
+            {/* Desktop Registration */}
             <div className="hidden md:block">
               <Link href="/register" className="bg-blue-600 px-6 py-1.5 rounded-sm text-sm font-bold tracking-wide hover:bg-blue-500 transition-colors">
                 Registration
               </Link>
             </div>
 
-            {/* Mobile Hamburger Button (Visible only on Mobile) */}
+            {/* Mobile Hamburger Button */}
             <div className="md:hidden flex items-center w-full justify-end py-2">
               <button onClick={toggleMenu} className="text-slate-300 hover:text-white p-2 focus:outline-none">
-                {/* Switches between Hamburger icon and 'X' icon based on state */}
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu (Appears when isMobileMenuOpen is true) */}
+        {/* Mobile Dropdown Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-slate-800 border-t border-slate-700 absolute w-full left-0 top-full shadow-xl">
             <div className="px-4 pt-2 pb-4 space-y-1 flex flex-col">
               <Link href="/" onClick={toggleMenu} className="text-white block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700">Home</Link>
               <Link href="/about" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">About</Link>
               <Link href="/speakers" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Speakers</Link>
-              <Link href="/tracks
+              <Link href="/tracks" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Call for Papers</Link>
+              <Link href="/schedule" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Schedule</Link>
+              <Link href="/workshops" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Workshops</Link>
+              <Link href="/sponsors" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Sponsors</Link>
+              <Link href="/committee" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Organizing Team</Link>
+              <Link href="/contact" onClick={toggleMenu} className="text-slate-300 block px-3 py-3 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Contact</Link>
+              
+              <Link href="/register" onClick={toggleMenu} className="bg-blue-600 text-white block px-3 py-3 rounded-md text-base font-bold mt-4 text-center hover:bg-blue-500">
+                Registration
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}

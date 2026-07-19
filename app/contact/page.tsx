@@ -4,7 +4,6 @@ export default function ContactPage() {
   return (
     <div className="bg-slate-50 min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       
-      {/* Page Header */}
       <div className="max-w-7xl mx-auto mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight uppercase mb-4">
           Contact & Venue
@@ -17,10 +16,8 @@ export default function ContactPage() {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
         
-        {/* Left Column: Contact Info & Logistics (Takes up 3/5 of the grid) */}
         <div className="lg:col-span-3 space-y-10">
           
-          {/* Official Contact Block */}
           <section className="bg-white border-t-4 border-blue-600 shadow-sm p-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">
               Organizing Secretariat
@@ -65,7 +62,6 @@ export default function ContactPage() {
             </div>
           </section>
 
-          {/* Travel & Venue Logistics */}
           <section className="bg-slate-900 text-white shadow-lg p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 opacity-10 transform translate-x-4 -translate-y-4">
               <MapPin size={160} />
@@ -96,12 +92,26 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
+
+              {/* NEW: IIT Ropar Map Embed */}
+              <div className="mt-8 rounded-sm overflow-hidden border border-slate-700 shadow-md">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Indian+Institute+of+Technology+Ropar,+Rupnagar,+Punjab&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="250" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full"
+                ></iframe>
+              </div>
+
             </div>
           </section>
 
         </div>
 
-        {/* Right Column: Contact Form (Takes up 2/5 of the grid) */}
         <div className="lg:col-span-2">
           <div className="bg-white border border-slate-200 shadow-xl p-8 sticky top-32">
             <h2 className="text-2xl font-bold text-slate-900 mb-2 uppercase tracking-tight">Send a Message</h2>

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
@@ -16,14 +15,15 @@ export default function Navbar() {
     <header className="w-full bg-white shadow-md fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center border-b border-slate-100">
         <div className="flex items-center gap-4">
-          <div className="relative w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0">
-             <Image src="/logo-1.png" alt="Logo 1" fill className="object-contain" />
+          {/* Using standard HTML img tags with explicit GitHub Pages paths */}
+          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+             <img src="/METRIX-7.0/logo-1.png" alt="Logo 1" className="w-full h-full object-contain p-1" />
           </div>
-          <div className="relative w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0">
-             <Image src="/logo-2.png" alt="Logo 2" fill className="object-contain" />
+          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+             <img src="/METRIX-7.0/logo-2.png" alt="Logo 2" className="w-full h-full object-contain p-1" />
           </div>
-          <div className="relative w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0">
-             <Image src="/logo-3.png" alt="Logo 3" fill className="object-contain" />
+          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+             <img src="/METRIX-7.0/logo-3.png" alt="Logo 3" className="w-full h-full object-contain p-1" />
           </div>
         </div>
         <div className="text-right hidden md:block">

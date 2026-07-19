@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -8,8 +7,8 @@ export default function Footer() {
         
         <div>
           <div className="flex items-center gap-4 mb-6">
-            <div className="relative w-14 h-14 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden">
-               <Image src="/logo-3.png" alt="Logo 3" fill className="object-contain p-1" />
+            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+               <img src="/METRIX-7.0/logo-3.png" alt="Logo 3" className="w-full h-full object-contain p-1" />
             </div>
             <h3 className="text-2xl font-bold text-white uppercase tracking-tight">METRIX 7.0<span className="lowercase">i</span></h3>
           </div>

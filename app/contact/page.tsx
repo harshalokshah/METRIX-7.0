@@ -93,7 +93,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* NEW: IIT Ropar Map Embed */}
               <div className="mt-8 rounded-sm overflow-hidden border border-slate-700 shadow-md">
                 <iframe 
                   src="https://maps.google.com/maps?q=Indian+Institute+of+Technology+Ropar,+Rupnagar,+Punjab&t=&z=14&ie=UTF8&iwloc=&output=embed" 
@@ -119,12 +118,18 @@ export default function ContactPage() {
               Use the form below for quick queries. We aim to respond within 24-48 business hours.
             </p>
 
-            <form className="space-y-5">
+            {/* NEW: Activated form sending to your email via FormSubmit */}
+            <form action="https://formsubmit.co/2023meb1344@iitrpr.ac.in" method="POST" className="space-y-5">
+              
+              {/* Optional: Disables the Captcha for a smoother user experience */}
+              <input type="hidden" name="_captcha" value="false" />
+
               <div>
                 <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-1">Full Name *</label>
                 <input 
                   type="text" 
                   id="name" 
+                  name="name"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                   placeholder="Prof. John Doe"
                   required
@@ -136,6 +141,7 @@ export default function ContactPage() {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                   placeholder="john@institution.edu"
                   required
@@ -146,6 +152,7 @@ export default function ContactPage() {
                 <label htmlFor="subject" className="block text-sm font-bold text-slate-700 mb-1">Subject</label>
                 <select 
                   id="subject" 
+                  name="subject"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-slate-700"
                 >
                   <option>General Inquiry</option>
@@ -159,6 +166,7 @@ export default function ContactPage() {
                 <label htmlFor="message" className="block text-sm font-bold text-slate-700 mb-1">Your Message *</label>
                 <textarea 
                   id="message" 
+                  name="message"
                   rows={5} 
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none"
                   placeholder="How can we help you?"
@@ -167,7 +175,7 @@ export default function ContactPage() {
               </div>
 
               <button 
-                type="button" 
+                type="submit" 
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-sm transition-colors flex items-center justify-center gap-2 shadow-md uppercase tracking-wider"
               >
                 <Send size={18} /> Send Message

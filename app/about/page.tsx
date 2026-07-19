@@ -1,4 +1,4 @@
-import { Building2, Target, Globe, BookOpen, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { Building2, Target, Globe, BookOpen, ChevronRight, CheckCircle2, Zap } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -18,7 +18,6 @@ export default function AboutPage() {
         {/* Left Column: Main Content (Takes up 2/3 of the grid) */}
         <div className="lg:col-span-2 space-y-12">
           
-          {/* Section 1: About METRIX */}
           <section className="bg-white p-8 border border-slate-200 shadow-sm rounded-sm">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight flex items-center gap-3 border-b-2 border-slate-100 pb-3">
               <Target className="text-blue-600" />
@@ -34,7 +33,6 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Section 2: The Department */}
           <section className="bg-white p-8 border border-slate-200 shadow-sm rounded-sm">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight flex items-center gap-3 border-b-2 border-slate-100 pb-3">
               <Building2 className="text-blue-600" />
@@ -50,7 +48,6 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Section 3: IIT Ropar */}
           <section className="bg-white p-8 border border-slate-200 shadow-sm rounded-sm">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight flex items-center gap-3 border-b-2 border-slate-100 pb-3">
               <Globe className="text-blue-600" />
@@ -88,41 +85,40 @@ export default function AboutPage() {
                   <CheckCircle2 className="text-blue-400 mt-1 shrink-0" size={18} />
                   <div>
                     <strong className="block text-slate-200">Venue</strong>
-                    <span className="text-sm text-slate-400">Lecture Hall Complex, IIT Ropar</span>
+                    <span className="text-sm text-slate-400">Satish Dhawan Block, IIT Ropar</span>
                   </div>
                 </li>
-                <li className="flex items-start gap-3 border-b border-slate-700 pb-4">
+                <li className="flex items-start gap-3">
                   <CheckCircle2 className="text-blue-400 mt-1 shrink-0" size={18} />
                   <div>
                     <strong className="block text-slate-200">Target Audience</strong>
                     <span className="text-sm text-slate-400">Academicians, Industry R&D Professionals, Ph.D. & B.Tech Students</span>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="text-blue-400 mt-1 shrink-0" size={18} />
-                  <div>
-                    <strong className="block text-slate-200">Expected Footfall</strong>
-                    <span className="text-sm text-slate-400">400 - 500 Attendees</span>
-                  </div>
-                </li>
               </ul>
             </div>
 
-            {/* Quick Navigation Card */}
-            <div className="bg-white border border-slate-200 p-8 shadow-sm rounded-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-4 uppercase tracking-tight">Helpful Links</h3>
-              <div className="space-y-3">
-                <Link href="/committee" className="flex items-center justify-between group p-3 bg-slate-50 hover:bg-blue-50 transition-colors border border-slate-100 rounded">
-                  <span className="font-semibold text-slate-700 group-hover:text-blue-700 transition-colors">Organizing Committee</span>
-                  <ChevronRight size={16} className="text-slate-400 group-hover:text-blue-600" />
+            {/* High-Attention Quick Navigation Card */}
+            <div className="bg-gradient-to-br from-blue-700 to-slate-900 p-8 shadow-2xl rounded-md border border-blue-400 relative overflow-hidden group">
+              {/* Subtle animated background glow */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+              
+              <h3 className="text-xl font-extrabold text-white mb-6 uppercase tracking-tight flex items-center gap-2 relative z-10">
+                <Zap className="text-amber-400" size={24} /> Important Links
+              </h3>
+              
+              <div className="space-y-3 relative z-10">
+                <Link href="/speakers" className="flex items-center justify-between group/link p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all border border-white/20 rounded-sm">
+                  <span className="font-bold text-white tracking-wide">Speakers</span>
+                  <ChevronRight size={18} className="text-blue-300 group-hover/link:text-white group-hover/link:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/tracks" className="flex items-center justify-between group p-3 bg-slate-50 hover:bg-blue-50 transition-colors border border-slate-100 rounded">
-                  <span className="font-semibold text-slate-700 group-hover:text-blue-700 transition-colors">Technical Tracks</span>
-                  <ChevronRight size={16} className="text-slate-400 group-hover:text-blue-600" />
+                <Link href="/tracks" className="flex items-center justify-between group/link p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all border border-white/20 rounded-sm">
+                  <span className="font-bold text-white tracking-wide">Technical Tracks</span>
+                  <ChevronRight size={18} className="text-blue-300 group-hover/link:text-white group-hover/link:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/contact" className="flex items-center justify-between group p-3 bg-slate-50 hover:bg-blue-50 transition-colors border border-slate-100 rounded">
-                  <span className="font-semibold text-slate-700 group-hover:text-blue-700 transition-colors">Venue & Travel Info</span>
-                  <ChevronRight size={16} className="text-slate-400 group-hover:text-blue-600" />
+                <Link href="/workshops" className="flex items-center justify-between group/link p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all border border-white/20 rounded-sm">
+                  <span className="font-bold text-white tracking-wide">Workshops</span>
+                  <ChevronRight size={18} className="text-blue-300 group-hover/link:text-white group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>

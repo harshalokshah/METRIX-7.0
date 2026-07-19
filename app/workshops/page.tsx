@@ -84,7 +84,7 @@ export default function WorkshopsPage() {
             <div className="relative z-10">
               <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Exclusive Competition</span>
               <h2 className="text-3xl font-extrabold text-white mb-4 uppercase tracking-tight">
-                ASME-Level Hackathon
+                UG-Level Hackathon
               </h2>
               <p className="text-slate-300 mb-6 text-lg leading-relaxed max-w-2xl text-justify">
                 Plan and test your limits in this rigorous, time-constrained design and computational hackathon. Exclusively organized for B.Tech students, this event challenges teams to solve real-world industrial mechanical problems using rapid prototyping and simulation frameworks.

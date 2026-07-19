@@ -1,18 +1,17 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300 py-16 border-t-4 border-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
         
-        {/* Column 1 */}
         <div>
           <div className="flex items-center gap-4 mb-6">
-            {/* Logo 3 Placeholder */}
-            <div className="relative w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center overflow-hidden shrink-0 border border-slate-700">
-               <span className="text-[10px] font-bold text-slate-400">Logo 3</span>
+            <div className="relative w-14 h-14 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden">
+               <Image src="/logo-3.png" alt="Logo 3" fill className="object-contain p-1" />
             </div>
-            <h3 className="text-2xl font-bold text-white uppercase tracking-tight">METRIX 7.0i</h3>
+            <h3 className="text-2xl font-bold text-white uppercase tracking-tight">METRIX 7.0<span className="lowercase">i</span></h3>
           </div>
           
           <p className="text-sm leading-relaxed mb-6">
@@ -23,7 +22,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Column 2 */}
         <div>
           <h3 className="text-lg font-bold text-white mb-6 uppercase tracking-tight">Quick Links</h3>
           <ul className="space-y-3 text-sm">
@@ -31,11 +29,10 @@ export default function Footer() {
             <li><Link href="/tracks" className="hover:text-blue-400 transition-colors">Call for Papers</Link></li>
             <li><Link href="/committee" className="hover:text-blue-400 transition-colors">Organizing Team</Link></li>
             <li><Link href="/register" className="hover:text-blue-400 transition-colors">Registration & Accommodation</Link></li>
-            <li><Link href="/hackathon" className="hover:text-blue-400 transition-colors">ASME-Level Hackathon</Link></li>
+            <li><Link href="/workshops" className="hover:text-blue-400 transition-colors">ASME-Level Hackathon</Link></li>
           </ul>
         </div>
 
-        {/* Column 3 */}
         <div>
           <h3 className="text-lg font-bold text-white mb-6 uppercase tracking-tight">Contact Us</h3>
           <div className="text-sm space-y-4">
